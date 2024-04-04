@@ -44,8 +44,11 @@ projectBoxes.forEach(box => {
     frontFace.style.transform = 'rotatey(0deg)';
   });
 });
+
+
+
 document.getElementById('TalkWithMe').addEventListener('click', function() {
-  // Replace 'your-email@example.com' with your actual email address
+ 
   var email = 'zakimohammad222@gmail.com';
   var subject = 'Regarding Your Website';
   var body = 'Hello,\n\nI would like to discuss...\n\nSincerely,\n[Zaki Mohammad]';
@@ -57,6 +60,26 @@ document.getElementById('TalkWithMe').addEventListener('click', function() {
   // Open default email client with pre-filled message
   window.location.href = mailtoLink;
 });
+
+
+
+document.getElementById('Talk').addEventListener('click', function() {
+ 
+  var email = 'zakimohammad222@gmail.com';
+  var subject = '';
+  var body = 'Hello';
+
+  var mailtoLink = 'mailto:' + email +
+                   '?subject=' + encodeURIComponent(subject) +
+                   '&body=' + encodeURIComponent(body);
+
+  window.location.href = mailtoLink;
+});
+
+
+
+
+
 
 
 document.getElementById('ThanksForThis').addEventListener('click', function() {
@@ -99,16 +122,6 @@ function sendEmail() {
         }
     );
 }
-
-function checkEmail(email) {
-  // Regular expression for validating email address
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
-
-
-
-
 
 
 form.addEventListener("submit", (e) => {
